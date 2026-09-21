@@ -6,7 +6,11 @@ Uso: python build.py   (escribe los index.html en la raiz del repo)
 import json
 import os
 
+import content_modelos
 from content import NOT_FOUND, PAGES, SITE
+
+# Las fichas por modelo viven en su propio modulo para no inflar content.py.
+content_modelos.add_pages(PAGES, SITE)
 
 BASE = SITE["base"]
 TODAY = SITE["updated"]
@@ -14,6 +18,7 @@ TODAY = SITE["updated"]
 NAV = [
     ("", "Inicio"),
     ("mejores-micros-streaming/", "Mejores micros"),
+    ("por-modelo/", "Por modelo"),
     ("microfono-condensador/", "Condensador"),
     ("usb-o-xlr/", "USB o XLR"),
     ("micros-streaming-baratos/", "Baratos"),

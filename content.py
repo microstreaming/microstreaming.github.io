@@ -115,6 +115,8 @@ presenciales, pero para un streamer solo suman botones que se pueden mover sin q
   <span>Micrófonos para teléfono: solapa, USB-C, adaptadores y ajustes.</span></a>
   <a class="tile" href="behringer-c1-vs-c3/"><b>Behringer C-1 o C-3</b>
   <span>Dos condensadores económicos muy buscados, comparados sin marketing.</span></a>
+  <a class="tile" href="por-modelo/"><b>Busco un modelo concreto</b>
+  <span>Fichas una a una: Behringer, Neumann, QuadCast, array, electret y Shure.</span></a>
 </div>
 
 <h2 id="errores">Cinco errores que arruinan el sonido</h2>
@@ -140,6 +142,22 @@ corta las palabras. Empieza solo con un compresor suave y un filtro paso alto en
 <li><a href="micros-streaming-baratos/">Micros de streaming baratos que no suenan baratos</a></li>
 <li><a href="microfono-para-telefono/">Micrófono para teléfono: streaming desde el móvil</a></li>
 <li><a href="behringer-c1-vs-c3/">Behringer C-1 vs C-3: cuál comprar</a></li>
+</ul>
+
+<h3>Fichas por modelo</h3>
+<ul>
+<li><a href="por-modelo/">Índice de micrófonos por modelo</a></li>
+<li><a href="behringer-c1/">Behringer C-1: análisis, precio y requisitos</a></li>
+<li><a href="behringer-c3/">Behringer C-3: patrones polares y usos</a></li>
+<li><a href="microfono-condensador-neumann/">Condensador Neumann: qué estás pagando</a></li>
+<li><a href="hyperx-quadcast-rgb/">HyperX QuadCast RGB: análisis sin marketing</a></li>
+<li><a href="microfono-array/">Micrófono array: qué es y cuándo lo necesitas</a></li>
+<li><a href="microfono-electronico/">Micrófono electrónico: qué significa el término</a></li>
+<li><a href="shure-antena/">Antenas Shure para sistemas inalámbricos</a></li>
+</ul>
+
+<h3>Sobre el sitio</h3>
+<ul>
 <li><a href="quienes-somos/">Quiénes somos y cómo evaluamos</a></li>
 </ul>
 """,
@@ -782,6 +800,8 @@ PAGES["behringer-c1-vs-c3/"] = {
 </tbody></table>
 <div class="note">Si solo vas a grabar tu voz, la diferencia de precio no te compra
 mejor voz: te compra opciones que quizá nunca uses.</div>
+<p>Fichas completas de cada uno: <a href="../behringer-c1/">Behringer C-1</a> ·
+<a href="../behringer-c3/">Behringer C-3</a></p>
 
 <h2 id="diferencias">Diferencias punto por punto</h2>
 
