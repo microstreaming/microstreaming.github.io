@@ -6,7 +6,7 @@ Uso: python build.py   (escribe los index.html en la raiz del repo)
 import json
 import os
 
-from content import PAGES, SITE
+from content import NOT_FOUND, PAGES, SITE
 
 BASE = SITE["base"]
 TODAY = SITE["updated"]
@@ -224,6 +224,20 @@ def build():
     os.makedirs(assets, exist_ok=True)
     with open(os.path.join(assets, "favicon.svg"), "w", encoding="utf-8") as fh:
         fh.write(FAVICON)
+
+    # 404 personalizada (GitHub Pages la sirve desde la raiz del sitio).
+    # Usa URLs absolutas porque puede mostrarse en cualquier ruta.
+    nf = NOT_FOUND
+    html404 = TPL.format(
+        title=nf["title"], desc=nf["desc"], canonical=BASE + "/",
+        ogtype="website", sitename=SITE["name"], root=BASE + "/",
+        nav="\n".join('<a href="%s">%s</a>' % (url(s), l) for s, l in NAV),
+        crumb="", h1=nf["h1"], lede=nf["lede"], toc="",
+        body=nf["body"], faq="", jsonld=jsonld(nf, ""),
+        updated_h=human_date(TODAY),
+    ).replace('content="index,follow', 'content="noindex,follow')
+    with open(os.path.join(root_dir, "404.html"), "w", encoding="utf-8") as fh:
+        fh.write(html404)
 
     urls = "".join(
         "<url><loc>%s</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq>"

@@ -887,3 +887,24 @@ son distintas, y ninguna guía sustituye a probar el equipo en tu propio cuarto.
 <p><a href="../">Volver al inicio →</a></p>
 """,
 }
+
+# --------------------------------------------------------------------------
+# Pagina 404. No entra en PAGES porque no lleva URL propia ni va al sitemap.
+NOT_FOUND = {
+    "title": "Página no encontrada | MicrosStreaming",
+    "desc": "Esta página no existe. Vuelve al inicio o busca en las guías.",
+    "h1": "Esta página no existe",
+    "crumb": "404",
+    "lede": "El enlace que seguiste está roto o la página cambió de dirección.",
+    "body": """
+<h2>Prueba con estas guías</h2>
+<div class="grid">
+  <a class="tile" href="BASEURL/"><b>Inicio</b><span>Cómo elegir micrófono para streaming.</span></a>
+  <a class="tile" href="BASEURL/mejores-micros-streaming/"><b>Mejores micros</b><span>Comparativa por presupuesto.</span></a>
+  <a class="tile" href="BASEURL/usb-o-xlr/"><b>USB o XLR</b><span>Coste total y cuándo dar el salto.</span></a>
+  <a class="tile" href="BASEURL/microfono-condensador/"><b>Condensador</b><span>Cómo elegirlo y cuándo evitarlo.</span></a>
+  <a class="tile" href="BASEURL/micros-streaming-baratos/"><b>Baratos</b><span>Dónde sí se puede recortar.</span></a>
+  <a class="tile" href="BASEURL/microfono-para-telefono/"><b>Para teléfono</b><span>Streaming desde el móvil.</span></a>
+</div>
+""".replace("BASEURL", SITE["base"]),
+}
