@@ -17,7 +17,7 @@ NAV = [
     ("microfono-condensador/", "Condensador"),
     ("usb-o-xlr/", "USB o XLR"),
     ("micros-streaming-baratos/", "Baratos"),
-    ("microfono-para-telefono/", "Para telefono"),
+    ("microfono-para-telefono/", "Para teléfono"),
 ]
 
 
@@ -50,7 +50,7 @@ def toc_html(page):
     if not page.get("toc"):
         return ""
     items = "\n".join('<li><a href="#%s">%s</a></li>' % (i, t) for i, t in page["toc"])
-    return '<nav class="toc"><strong>En esta guia</strong><ol>%s</ol></nav>' % items
+    return '<nav class="toc"><strong>En esta guía</strong><ol>%s</ol></nav>' % items
 
 
 def jsonld(page, slug):
