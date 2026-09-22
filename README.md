@@ -43,3 +43,10 @@ cambia `BASE_DEFAULT` en `content.py` y deja de pasar la variable.
 
 Conviene decidir la URL **antes** de que Google indexe: cambiarla despues
 obliga a reindexar y se pierde parte del avance.
+
+## Verificacion de Google Search Console
+
+El fichero `google02704c519b649822.html` de la raiz es el comprobante de
+propiedad de Google Search Console. **No lo borres ni lo renombres**: si
+desaparece, Google retira la verificacion y se pierde el acceso a los
+datos de la propiedad. `build.py` no lo toca.
