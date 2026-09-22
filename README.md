@@ -3,7 +3,7 @@
 Sitio estatico de guias sobre micros para streaming. Web nicho SEO: una pagina
 por palabra clave, primero posicionar y despues monetizar.
 
-URL publica: https://microsstreaming.github.io/microstreaming.github.io/
+URL publica: https://microstreaming.github.io/
 
 ## Como editar
 
