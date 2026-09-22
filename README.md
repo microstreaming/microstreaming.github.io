@@ -23,9 +23,8 @@ GitHub Pages decide la URL por el nombre de la **cuenta**, no del repositorio:
 
 | Cuenta | Repositorio | URL publicada |
 |---|---|---|
-| `Poemasbiblicos` | `microstreaming.github.io` | `poemasbiblicos.github.io/microstreaming.github.io/` |
-| `creadigital` | `microstreaming.github.io` | `creadigital.github.io/microstreaming.github.io/` |
-| `microstreaming` | `microstreaming.github.io` | **`microstreaming.github.io/`** |
+| `microstreaming` | `microstreaming.github.io` | **`microstreaming.github.io/`** (actual) |
+| `otracuenta` | `microstreaming.github.io` | `otracuenta.github.io/microstreaming.github.io/` |
 
 Para publicar en `https://microstreaming.github.io/`:
 
