@@ -708,3 +708,11 @@ inalámbrico: mira la <a href="../mejores-micros-streaming/">comparativa de micr
 cable</a>, que por el mismo dinero suenan mejor y no se cortan.</p>
 """,
     }
+
+    # Las paginas de producto se anuncian como fichas, no como guias.
+    # Solo las de este modulo: PAGES tambien trae las guias de content.py.
+    fichas = ("behringer-c1/", "behringer-c3/", "microfono-condensador-neumann/",
+              "hyperx-quadcast-rgb/", "microfono-array/", "microfono-electronico/",
+              "shure-antena/")
+    for slug in fichas:
+        PAGES[slug]["kind"] = "Ficha"

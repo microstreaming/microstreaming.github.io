@@ -1,4 +1,5 @@
 /* MicrosStreaming - interacciones minimas.
+   El sistema editorial no lleva barra de progreso: era un degradado.
    Sin dependencias. Regla de oro: si algo de esto falla, el contenido se
    sigue viendo. Nada oculta texto de forma permanente. */
 (function () {
@@ -19,22 +20,6 @@
       doc.setAttribute("data-theme", next);
       try { localStorage.setItem("ms-theme", next); } catch (e) { /* modo privado */ }
     });
-  }
-
-  /* --- Barra de progreso de lectura -------------------------------------- */
-  var bar = document.querySelector(".progress");
-  if (bar) {
-    var queued = false;
-    var paint = function () {
-      var h = doc.scrollHeight - window.innerHeight;
-      var p = h > 0 ? window.scrollY / h : 0;
-      bar.style.transform = "scaleX(" + Math.min(1, Math.max(0, p)) + ")";
-      queued = false;
-    };
-    window.addEventListener("scroll", function () {
-      if (!queued) { queued = true; requestAnimationFrame(paint); }
-    }, { passive: true });
-    paint();
   }
 
   /* --- Scrollspy del indice lateral -------------------------------------- */
