@@ -6,15 +6,13 @@ import os
 # URL publica del sitio. Aparece en canonical, Open Graph, JSON-LD, el
 # sitemap y la pagina 404, asi que es la unica fuente de verdad.
 #
-# GitHub Pages decide la URL por el nombre de la CUENTA, no del repositorio:
-#   cuenta Poemasbiblicos + repo microstreaming.github.io
-#     -> https://poemasbiblicos.github.io/microstreaming.github.io/
-#   cuenta u organizacion microstreaming + repo microstreaming.github.io
-#     -> https://microstreaming.github.io/
+# GitHub Pages decide la URL por el nombre de la CUENTA, no del repositorio.
+# La cuenta es `microsstreaming` y el repo se llama igual, asi que el sitio
+# se publica en la raiz: https://microsstreaming.github.io/
 #
-# Para cambiarla basta con una variable de entorno, sin tocar codigo:
-#   MS_BASE=https://microstreaming.github.io python build.py
-BASE_DEFAULT = "https://poemasbiblicos.github.io/microstreaming.github.io"
+# Para generar con otra URL sin tocar codigo:
+#   MS_BASE=https://otra-url python build.py
+BASE_DEFAULT = "https://microsstreaming.github.io"
 BASE = os.environ.get("MS_BASE", BASE_DEFAULT).rstrip("/")
 
 SITE = {

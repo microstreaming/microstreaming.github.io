@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://poemasbiblicos.github.io/microstreaming.github.io/sitemap.xml
+Sitemap: https://microsstreaming.github.io/sitemap.xml
