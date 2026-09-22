@@ -1,9 +1,25 @@
 # -*- coding: utf-8 -*-
 """Contenido de las paginas. Editar aqui y volver a ejecutar build.py."""
 
+import os
+
+# URL publica del sitio. Aparece en canonical, Open Graph, JSON-LD, el
+# sitemap y la pagina 404, asi que es la unica fuente de verdad.
+#
+# GitHub Pages decide la URL por el nombre de la CUENTA, no del repositorio:
+#   cuenta Poemasbiblicos + repo microstreaming.github.io
+#     -> https://poemasbiblicos.github.io/microstreaming.github.io/
+#   cuenta u organizacion microstreaming + repo microstreaming.github.io
+#     -> https://microstreaming.github.io/
+#
+# Para cambiarla basta con una variable de entorno, sin tocar codigo:
+#   MS_BASE=https://microstreaming.github.io python build.py
+BASE_DEFAULT = "https://poemasbiblicos.github.io/microstreaming.github.io"
+BASE = os.environ.get("MS_BASE", BASE_DEFAULT).rstrip("/")
+
 SITE = {
     "name": "MicrosStreaming",
-    "base": "https://poemasbiblicos.github.io/microstreaming.github.io",
+    "base": BASE,
     "desc": ("Guias independientes sobre micros para streaming: comparativas, "
              "consejos de configuracion y ayuda para elegir microfono."),
     "published": "2026-09-21",
