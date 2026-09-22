@@ -14,40 +14,55 @@
 <meta property="og:description" content="Micrófono array o matriz de micrófonos: beamforming, cancelación de ruido, usos en videoconferencia y por qué no sirve para streaming.">
 <meta property="og:url" content="https://poemasbiblicos.github.io/microstreaming.github.io/microfono-array/">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#0f1115">
+<meta name="theme-color" content="#06080c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfcfe" media="(prefers-color-scheme: light)">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("ms-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://poemasbiblicos.github.io/microstreaming.github.io/#website", "url": "https://poemasbiblicos.github.io/microstreaming.github.io/", "name": "MicrosStreaming", "inLanguage": "es", "publisher": {"@id": "https://poemasbiblicos.github.io/microstreaming.github.io/#org"}}, {"@type": "Organization", "@id": "https://poemasbiblicos.github.io/microstreaming.github.io/#org", "name": "MicrosStreaming", "url": "https://poemasbiblicos.github.io/microstreaming.github.io/", "description": "Guias independientes sobre micros para streaming: comparativas, consejos de configuracion y ayuda para elegir microfono."}, {"@type": "WebPage", "@id": "https://poemasbiblicos.github.io/microstreaming.github.io/microfono-array/#webpage", "url": "https://poemasbiblicos.github.io/microstreaming.github.io/microfono-array/", "name": "Micrófono array: qué es, cómo funciona y cuándo lo necesitas", "description": "Micrófono array o matriz de micrófonos: beamforming, cancelación de ruido, usos en videoconferencia y por qué no sirve para streaming.", "inLanguage": "es", "isPartOf": {"@id": "https://poemasbiblicos.github.io/microstreaming.github.io/#website"}, "dateModified": "2026-09-21"}, {"@type": "Article", "@id": "https://poemasbiblicos.github.io/microstreaming.github.io/microfono-array/#article", "headline": "Micrófono array: varias cápsulas, un solo sonido", "description": "Micrófono array o matriz de micrófonos: beamforming, cancelación de ruido, usos en videoconferencia y por qué no sirve para streaming.", "inLanguage": "es", "datePublished": "2026-09-21", "dateModified": "2026-09-21", "author": {"@id": "https://poemasbiblicos.github.io/microstreaming.github.io/#org"}, "publisher": {"@id": "https://poemasbiblicos.github.io/microstreaming.github.io/#org"}, "mainEntityOfPage": {"@id": "https://poemasbiblicos.github.io/microstreaming.github.io/microfono-array/#webpage"}}, {"@type": "FAQPage", "@id": "https://poemasbiblicos.github.io/microstreaming.github.io/microfono-array/#faq", "mainEntity": [{"@type": "Question", "name": "¿Qué es un micrófono array?", "acceptedAnswer": {"@type": "Answer", "text": "Es un conjunto de dos o más cápsulas separadas por distancias conocidas cuyas señales se combinan por software. Al comparar el instante en que el sonido llega a cada cápsula, el sistema deduce de qué dirección viene y puede reforzar esa dirección y atenuar las demás."}}, {"@type": "Question", "name": "¿Un micrófono array sirve para streaming o podcast?", "acceptedAnswer": {"@type": "Answer", "text": "No es la herramienta adecuada. Está optimizado para inteligibilidad de voz a distancia en salas, no para calidad tonal; el procesamiento aplica supresión de ruido agresiva que adelgaza la voz. Para streaming rinde mucho más un micrófono cardioide cerca de la boca."}}, {"@type": "Question", "name": "¿El micrófono de mi portátil es un array?", "acceptedAnswer": {"@type": "Answer", "text": "En la mayoría de portátiles y móviles actuales, sí: llevan dos o más cápsulas y usan procesamiento para aislar tu voz del ambiente y cancelar el eco de los altavoces."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://poemasbiblicos.github.io/microstreaming.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Micrófono array", "item": "https://poemasbiblicos.github.io/microstreaming.github.io/microfono-array/"}]}]}</script>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
 <header class="site">
-  <div class="wrap">
-    <a class="brand" href="../">&#127908; Micros<span>Streaming</span></a>
-    <nav class="main"><a href="../">Inicio</a>
+  <div class="wrap bar">
+    <a class="brand" href="../">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg></span>Micros<em>Streaming</em>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label class="burger" for="nav-toggle" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
+    <nav class="main" aria-label="Principal"><a href="../">Inicio</a>
 <a href="../mejores-micros-streaming/">Mejores micros</a>
 <a href="../por-modelo/">Por modelo</a>
 <a href="../microfono-condensador/">Condensador</a>
 <a href="../usb-o-xlr/">USB o XLR</a>
 <a href="../micros-streaming-baratos/">Baratos</a>
 <a href="../microfono-para-telefono/">Para teléfono</a></nav>
+    <button class="theme-btn" type="button" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
   </div>
 </header>
-<div class="wrap"><div class="crumb"><a href="../">Inicio</a> &rsaquo; <span>Micrófono array</span></div></div>
-<div class="hero">
+
+<section class="hero">
   <div class="wrap">
+    <nav class="crumb" aria-label="Ruta"><a href="../">Inicio</a><span class="sep">/</span><span>Micrófono array</span></nav>
     <h1>Micrófono array: varias cápsulas, un solo sonido</h1>
     <p class="lede">Es la tecnología que llevan tu portátil, tu móvil y las barras de sala de reuniones. Resuelve un problema muy concreto, y no es el tuyo si transmites.</p>
-    <p class="meta">Actualizado el 21 de septiembre de 2026 &middot; Gu&iacute;a independiente &middot; Sin enlaces patrocinados</p>
+    <ul class="meta">
+      <li><span class="dot"></span>Actualizado el 21 de septiembre de 2026</li>
+      <li>Guía independiente</li>
+      <li>Sin enlaces patrocinados</li>
+    </ul>
   </div>
-</div>
-<main>
-  <div class="wrap">
-    <nav class="toc"><strong>En esta guía</strong><ol><li><a href="#que-es">Qué es un micrófono array</a></li>
-<li><a href="#beamforming">Beamforming explicado</a></li>
-<li><a href="#usos">Dónde se usa</a></li>
-<li><a href="#streaming">Por qué no sirve para streaming</a></li>
-<li><a href="#elegir">Cómo elegir uno</a></li></ol></nav>
-    
+</section>
+
+<main id="contenido">
+  <div class="wrap layout">
+    <article class="prose">
+      
 <h2 id="que-es">Qué es un micrófono array</h2>
 <p>Un <strong>micrófono array</strong> (o matriz de micrófonos) no es un micrófono: es
 un <em>sistema</em>. Varias cápsulas colocadas a distancias conocidas entre sí, más un
@@ -60,14 +75,14 @@ dirección quiere escuchar</strong>, sin mover nada físicamente.</p>
 <h2 id="beamforming">Beamforming explicado</h2>
 <p>A esa técnica se la llama <strong>beamforming</strong>: formación de haz. El sistema
 crea un «cono» virtual de escucha y lo apunta hacia quien está hablando.</p>
-<table>
+<div class="table-wrap"><div class="table-scroll"><table>
 <thead><tr><th>Función</th><th>Qué hace</th><th>Efecto secundario</th></tr></thead>
 <tbody>
 <tr><td>Beamforming</td><td>Apunta la escucha hacia la voz</td><td>Cambios de timbre al moverte</td></tr>
 <tr><td>Supresión de ruido</td><td>Elimina ruido constante de fondo</td><td>Adelgaza la voz y come los finales</td></tr>
 <tr><td>Cancelación de eco</td><td>Quita lo que suena por los altavoces</td><td>Puede cortar sílabas al hablar a la vez</td></tr>
 <tr><td>Control de ganancia</td><td>Nivela el volumen automáticamente</td><td>Sube el ruido en los silencios</td></tr>
-</tbody></table>
+</tbody></table></div></div>
 
 <h2 id="usos">Dónde se usa</h2>
 <ul class="checks">
@@ -107,23 +122,36 @@ quieres un micrófono por cabeza:</p>
 <p>Y si lo que buscabas era otra cosa, revisa el
 <a href="../por-modelo/">índice por modelo</a>.</p>
 
-    <h2 id="faq">Preguntas frecuentes</h2>
+      <h2 id="faq">Preguntas frecuentes</h2>
 <details><summary>¿Qué es un micrófono array?</summary><p>Es un conjunto de dos o más cápsulas separadas por distancias conocidas cuyas señales se combinan por software. Al comparar el instante en que el sonido llega a cada cápsula, el sistema deduce de qué dirección viene y puede reforzar esa dirección y atenuar las demás.</p></details>
 <details><summary>¿Un micrófono array sirve para streaming o podcast?</summary><p>No es la herramienta adecuada. Está optimizado para inteligibilidad de voz a distancia en salas, no para calidad tonal; el procesamiento aplica supresión de ruido agresiva que adelgaza la voz. Para streaming rinde mucho más un micrófono cardioide cerca de la boca.</p></details>
 <details><summary>¿El micrófono de mi portátil es un array?</summary><p>En la mayoría de portátiles y móviles actuales, sí: llevan dos o más cápsulas y usan procesamiento para aislar tu voz del ambiente y cancelar el eco de los altavoces.</p></details>
-    <div class="disc">Sitio informativo e independiente. No vendemos micr&oacute;fonos ni recibimos pago por recomendar marcas. Los precios citados son rangos orientativos y cambian seg&uacute;n tienda, pa&iacute;s e importaci&oacute;n: confirma siempre el precio en el comercio antes de comprar.</div>
+      <div class="disc">Sitio informativo e independiente. No vendemos micrófonos ni recibimos pago por recomendar marcas. Los precios citados son rangos orientativos y cambian según tienda, país e importación: confirma siempre el precio en el comercio antes de comprar.</div>
+    </article>
+    <aside class="rail"><p class="rail-title">En esta guía</p><ol><li><a href="#que-es">Qué es un micrófono array</a></li>
+<li><a href="#beamforming">Beamforming explicado</a></li>
+<li><a href="#usos">Dónde se usa</a></li>
+<li><a href="#streaming">Por qué no sirve para streaming</a></li>
+<li><a href="#elegir">Cómo elegir uno</a></li></ol></aside>
   </div>
 </main>
+
 <footer class="site">
-  <div class="wrap cols">
-    <div><strong>MicrosStreaming</strong><br>Gu&iacute;as de micr&oacute;fonos para streaming, podcast y locuci&oacute;n.</div>
-    <div>
-      <a href="../">Inicio</a> &middot;
-      <a href="../mejores-micros-streaming/">Mejores micros</a> &middot;
-      <a href="../usb-o-xlr/">USB o XLR</a> &middot;
-      <a href="../quienes-somos/">Qui&eacute;nes somos</a>
+  <div class="wrap">
+    <div class="cols">
+      <div class="about">
+        <a class="brand" href="../"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg></span>Micros<em>Streaming</em></a>
+        <p>Guías de micrófonos para streaming, podcast y locución. Escritas para que decidas tú, no para que compres más.</p>
+      </div>
+      <div><h4>Guías</h4><ul><li><a href="../mejores-micros-streaming/">Mejores micros</a></li><li><a href="../usb-o-xlr/">USB o XLR</a></li><li><a href="../microfono-condensador/">Condensador</a></li><li><a href="../micros-streaming-baratos/">Baratos</a></li><li><a href="../microfono-para-telefono/">Para teléfono</a></li></ul></div><div><h4>Por modelo</h4><ul><li><a href="../por-modelo/">Todas las fichas</a></li><li><a href="../behringer-c1/">Behringer C-1</a></li><li><a href="../behringer-c3/">Behringer C-3</a></li><li><a href="../hyperx-quadcast-rgb/">HyperX QuadCast</a></li><li><a href="../quienes-somos/">Quiénes somos</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 MicrosStreaming</span>
+      <span>Hecho con HTML estático. Sin rastreadores.</span>
     </div>
   </div>
 </footer>
+
+<script src="../assets/app.js" defer></script>
 </body>
 </html>
