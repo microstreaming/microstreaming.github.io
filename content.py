@@ -7,12 +7,16 @@ import os
 # sitemap y la pagina 404, asi que es la unica fuente de verdad.
 #
 # GitHub Pages decide la URL por el nombre de la CUENTA, no del repositorio.
-# La cuenta es `microsstreaming` y el repo se llama igual, asi que el sitio
-# se publica en la raiz: https://microsstreaming.github.io/
+# OJO: la cuenta es `microsstreaming` (doble s) y el repo se llama
+# `microstreaming.github.io` (una sola s). Al no coincidir, Pages lo
+# publica como project page, en una subcarpeta.
+# Si se renombra el repo a `microsstreaming.github.io` pasara a servirse
+# en la raiz y habra que dejar BASE_DEFAULT en
+# https://microsstreaming.github.io
 #
 # Para generar con otra URL sin tocar codigo:
 #   MS_BASE=https://otra-url python build.py
-BASE_DEFAULT = "https://microsstreaming.github.io"
+BASE_DEFAULT = "https://microsstreaming.github.io/microstreaming.github.io"
 BASE = os.environ.get("MS_BASE", BASE_DEFAULT).rstrip("/")
 
 SITE = {
