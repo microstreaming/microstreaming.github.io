@@ -11,11 +11,14 @@ import json
 import os
 import re
 
+import content_guias
 import content_modelos
 from content import NOT_FOUND, PAGES, SITE
 
-# Las fichas por modelo viven en su propio modulo para no inflar content.py.
+# El contenido se reparte en modulos para no inflar content.py:
+# las fichas por modelo y las guias de apoyo van aparte.
 content_modelos.add_pages(PAGES, SITE)
+content_guias.add_pages(PAGES, SITE)
 
 BASE = SITE["base"]
 TODAY = SITE["updated"]
@@ -43,6 +46,12 @@ FOOTER_COLS = [
         ("behringer-c1/", "Behringer C-1"),
         ("behringer-c3/", "Behringer C-3"),
         ("hyperx-quadcast-rgb/", "HyperX QuadCast"),
+    ]),
+    ("Aprender", [
+        ("dinamico-vs-condensador/", "Dinámico vs condensador"),
+        ("configurar-microfono-obs/", "Micrófono en OBS"),
+        ("quitar-ruido-de-fondo/", "Quitar ruido de fondo"),
+        ("brazo-y-arana-antivibracion/", "Brazo y araña"),
         ("quienes-somos/", "Quiénes somos"),
     ]),
 ]

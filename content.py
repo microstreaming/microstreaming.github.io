@@ -22,7 +22,7 @@ SITE = {
     "desc": ("Guias independientes sobre micros para streaming: comparativas, "
              "consejos de configuracion y ayuda para elegir microfono."),
     "published": "2026-09-21",
-    "updated": "2026-09-21",
+    "updated": "2026-09-23",
 }
 
 PAGES = {}
@@ -132,6 +132,12 @@ presenciales, pero para un streamer solo suman botones que se pueden mover sin q
   <span>Dos condensadores económicos muy buscados, comparados sin marketing.</span></a>
   <a class="tile" href="por-modelo/"><b>Busco un modelo concreto</b>
   <span>Fichas una a una: Behringer, Neumann, QuadCast, array, electret y Shure.</span></a>
+  <a class="tile" href="mejores-microfonos-podcast/"><b>Grabo un podcast</b>
+  <span>Qué montaje necesitas según cuántas voces haya en la sala.</span></a>
+  <a class="tile" href="microfono-para-youtube/"><b>Grabo vídeo de formato largo</b>
+  <span>Qué micro según si puede salir en plano, y cómo sincronizarlo.</span></a>
+  <a class="tile" href="configurar-microfono-obs/"><b>Ya tengo micro, suena regular</b>
+  <span>La cadena de filtros de OBS en el orden que funciona.</span></a>
 </div>
 
 <h2 id="errores">Cinco errores que arruinan el sonido</h2>
@@ -169,6 +175,16 @@ corta las palabras. Empieza solo con un compresor suave y un filtro paso alto en
 <li><a href="microfono-array/">Micrófono array: qué es y cuándo lo necesitas</a></li>
 <li><a href="microfono-electronico/">Micrófono electrónico: qué significa el término</a></li>
 <li><a href="shure-antena/">Antenas Shure para sistemas inalámbricos</a></li>
+</ul>
+
+<h3>Aprender a usarlo</h3>
+<ul>
+<li><a href="dinamico-vs-condensador/">Dinámico vs condensador: cuál elegir</a></li>
+<li><a href="mejores-microfonos-podcast/">Mejores micrófonos para podcast</a></li>
+<li><a href="microfono-para-youtube/">Micrófono para grabar vídeos de YouTube</a></li>
+<li><a href="configurar-microfono-obs/">Cómo configurar el micrófono en OBS</a></li>
+<li><a href="quitar-ruido-de-fondo/">Cómo quitar el ruido de fondo</a></li>
+<li><a href="brazo-y-arana-antivibracion/">Brazo y araña antivibración</a></li>
 </ul>
 
 <h3>Sobre el sitio</h3>

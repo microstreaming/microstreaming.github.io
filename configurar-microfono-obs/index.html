@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cómo configurar el micrófono en OBS paso a paso</title>
+<meta name="description" content="Configurar el micrófono en OBS: ganancia, filtro paso alto, compresor, puerta de ruido y orden correcto de los filtros, explicado sin jerga.">
+<link rel="canonical" href="https://microstreaming.github.io/configurar-microfono-obs/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="MicrosStreaming">
+<meta property="og:title" content="Cómo configurar el micrófono en OBS paso a paso">
+<meta property="og:description" content="Configurar el micrófono en OBS: ganancia, filtro paso alto, compresor, puerta de ruido y orden correcto de los filtros, explicado sin jerga.">
+<meta property="og:url" content="https://microstreaming.github.io/configurar-microfono-obs/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0D0D0D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("ms-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://microstreaming.github.io/#website", "url": "https://microstreaming.github.io/", "name": "MicrosStreaming", "inLanguage": "es", "publisher": {"@id": "https://microstreaming.github.io/#org"}}, {"@type": "Organization", "@id": "https://microstreaming.github.io/#org", "name": "MicrosStreaming", "url": "https://microstreaming.github.io/", "description": "Guias independientes sobre micros para streaming: comparativas, consejos de configuracion y ayuda para elegir microfono."}, {"@type": "WebPage", "@id": "https://microstreaming.github.io/configurar-microfono-obs/#webpage", "url": "https://microstreaming.github.io/configurar-microfono-obs/", "name": "Cómo configurar el micrófono en OBS paso a paso", "description": "Configurar el micrófono en OBS: ganancia, filtro paso alto, compresor, puerta de ruido y orden correcto de los filtros, explicado sin jerga.", "inLanguage": "es", "isPartOf": {"@id": "https://microstreaming.github.io/#website"}, "dateModified": "2026-09-23"}, {"@type": "Article", "@id": "https://microstreaming.github.io/configurar-microfono-obs/#article", "headline": "Configurar el micrófono en OBS: el orden importa más que los valores", "description": "Configurar el micrófono en OBS: ganancia, filtro paso alto, compresor, puerta de ruido y orden correcto de los filtros, explicado sin jerga.", "inLanguage": "es", "datePublished": "2026-09-21", "dateModified": "2026-09-23", "author": {"@id": "https://microstreaming.github.io/#org"}, "publisher": {"@id": "https://microstreaming.github.io/#org"}, "mainEntityOfPage": {"@id": "https://microstreaming.github.io/configurar-microfono-obs/#webpage"}}, {"@type": "FAQPage", "@id": "https://microstreaming.github.io/configurar-microfono-obs/#faq", "mainEntity": [{"@type": "Question", "name": "¿En qué orden hay que poner los filtros del micrófono en OBS?", "acceptedAnswer": {"@type": "Answer", "text": "Filtro paso alto, después puerta de ruido, después compresor y por último ganancia o limitador. El orden importa porque cada filtro trabaja sobre lo que le entrega el anterior: si comprimes antes de limpiar, amplificas el ruido que luego querrás quitar."}}, {"@type": "Question", "name": "¿Por qué se oye ruido de fondo en OBS aunque el micrófono sea bueno?", "acceptedAnswer": {"@type": "Answer", "text": "Lo habitual es tener demasiada ganancia para compensar que hablas lejos del micrófono. Al subir la ganancia subes tu voz y el ruido por igual. La solución es acercarte y bajar la ganancia, no añadir más filtros."}}, {"@type": "Question", "name": "¿Qué valores debe tener el compresor en OBS?", "acceptedAnswer": {"@type": "Answer", "text": "Un punto de partida razonable es ratio 3:1, umbral en torno a -18 dB, ataque de 6 ms y liberación de 60 ms, ajustando hasta ver unos 6 dB de reducción en los picos. Si el medidor marca reducción constante, el umbral está demasiado bajo."}}, {"@type": "Question", "name": "¿Debo usar la supresión de ruido de OBS?", "acceptedAnswer": {"@type": "Answer", "text": "Con moderación. El método RNNoise limpia bastante pero deja la voz algo metálica y se come las respiraciones. Si tu cuarto está razonablemente silencioso, una puerta de ruido suave da un resultado más natural."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://microstreaming.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Configurar el micrófono en OBS", "item": "https://microstreaming.github.io/configurar-microfono-obs/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="../">Micros<em>Streaming</em></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label class="burger" for="nav-toggle">Menú</label>
+    <nav class="main" aria-label="Principal"><a href="../">Inicio</a>
+<a href="../mejores-micros-streaming/">Mejores micros</a>
+<a href="../por-modelo/">Por modelo</a>
+<a href="../microfono-condensador/">Condensador</a>
+<a href="../usb-o-xlr/">USB o XLR</a>
+<a href="../micros-streaming-baratos/">Baratos</a>
+<a href="../microfono-para-telefono/">Para teléfono</a></nav>
+    <button class="theme-btn" type="button">Tema</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Ruta"><a href="../">Inicio</a><span class="sep">/</span><span>Configurar el micrófono en OBS</span></nav>
+    <p class="eyebrow">Guía</p>
+    <h1>Configurar el micrófono en OBS: <em>el orden importa más que los valores</em></h1>
+    <p class="lede">Cinco filtros bien puestos en el orden correcto suenan mejor que quince mal encadenados. Esta es la cadena que funciona y el motivo de cada eslabón.</p>
+    <ul class="meta">
+      <li>Actualizado <b>23 de septiembre de 2026</b></li>
+      <li>Guía independiente</li>
+      <li>Sin enlaces patrocinados</li>
+    </ul>
+  </div>
+</section>
+
+<main id="contenido">
+  <div class="wrap layout">
+    <article class="prose">
+      
+<h2 id="antes">Antes de tocar OBS</h2>
+<p>Ningún filtro arregla una señal mal capturada. Estos tres minutos ahorran una hora de
+ajustes:</p>
+<ul class="checks">
+<li><strong>Acércate a 5-10 cm</strong> del micrófono si es dinámico, 10-20 cm si es
+condensador.</li>
+<li><strong>Apúntalo ligeramente fuera de eje</strong>, hacia la comisura de la boca.</li>
+<li><strong>Sube la ganancia en la interfaz o en el propio micro</strong>, no en OBS,
+hasta que tus picos normales lleguen a unos -12 dB.</li>
+<li><strong>Apaga lo que zumbe</strong>: ventilador, aire, torre del PC si la tienes al
+lado.</li>
+</ul>
+<div class="note">
+<strong>Si el ruido de fondo ya se oye en crudo, no sigas.</strong> Arréglalo antes: es
+mucho más barato mover el ventilador que perseguirlo con filtros.
+</div>
+
+<h2 id="anadir">Añadir el micrófono</h2>
+<ol>
+<li>En <strong>Fuentes</strong>, pulsa <code>+</code> y elige <em>Captura de entrada de
+audio</em>.</li>
+<li>Selecciona tu micrófono por su nombre, no «Dispositivo predeterminado»: si algún día
+conectas unos auriculares, el predeterminado cambia sin avisar.</li>
+<li>Desactiva el micrófono de <strong>Mezclador de audio → Mic/Aux</strong> si te quedan
+dos entradas duplicadas.</li>
+<li>Haz clic derecho sobre la fuente → <strong>Filtros</strong>. Aquí se construye todo.</li>
+</ol>
+
+<h2 id="cadena">La cadena de filtros, en orden</h2>
+<p>El orden no es decorativo: cada filtro procesa lo que le pasa el anterior.</p>
+<div class="table-wrap"><div class="table-scroll"><table>
+<thead><tr><th>#</th><th>Filtro</th><th>Qué hace</th><th>Por qué va ahí</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Filtro paso alto</td><td>Corta graves por debajo de 80 Hz</td><td>Quita retumbe antes de que nada lo amplifique</td></tr>
+<tr><td>2</td><td>Puerta de ruido</td><td>Silencia cuando no hablas</td><td>Actúa sobre señal ya limpia de graves</td></tr>
+<tr><td>3</td><td>Compresor</td><td>Iguala volumen alto y bajo</td><td>Si fuera antes, subiría el ruido que la puerta iba a cortar</td></tr>
+<tr><td>4</td><td>Ganancia</td><td>Ajusta el nivel final</td><td>Al final, cuando ya sabes con qué señal trabajas</td></tr>
+<tr><td>5</td><td>Limitador</td><td>Impide saturar</td><td>Red de seguridad, siempre el último</td></tr>
+</tbody></table></div></div>
+
+<h2 id="valores">Valores de partida</h2>
+<p>No son dogma: son un sitio del que salir. Ajusta escuchándote, no mirando números.</p>
+<div class="table-wrap"><div class="table-scroll"><table>
+<thead><tr><th>Filtro</th><th>Parámetro</th><th>Valor inicial</th></tr></thead>
+<tbody>
+<tr><td>Paso alto</td><td>Frecuencia</td><td>80 Hz</td></tr>
+<tr><td>Puerta de ruido</td><td>Umbral de cierre</td><td>-45 dB</td></tr>
+<tr><td>Puerta de ruido</td><td>Umbral de apertura</td><td>-35 dB</td></tr>
+<tr><td>Compresor</td><td>Ratio</td><td>3:1</td></tr>
+<tr><td>Compresor</td><td>Umbral</td><td>-18 dB</td></tr>
+<tr><td>Compresor</td><td>Ataque / liberación</td><td>6 ms / 60 ms</td></tr>
+<tr><td>Limitador</td><td>Umbral</td><td>-3 dB</td></tr>
+</tbody></table></div></div>
+<p>Deja siempre <strong>10 dB de diferencia</strong> entre los dos umbrales de la puerta.
+Si los pegas, la puerta parpadea y te corta las sílabas.</p>
+
+<h2 id="problemas">Problemas frecuentes</h2>
+<div class="table-wrap"><div class="table-scroll"><table>
+<thead><tr><th>Síntoma</th><th>Causa probable</th><th>Solución</th></tr></thead>
+<tbody>
+<tr><td>Se cortan los finales de palabra</td><td>Puerta demasiado agresiva</td><td>Baja el umbral de cierre y sube la liberación</td></tr>
+<tr><td>Ruido que sube al callar</td><td>Compresor con umbral muy bajo</td><td>Sube el umbral; comprime menos</td></tr>
+<tr><td>Voz metálica</td><td>Supresión de ruido excesiva</td><td>Quita RNNoise y usa puerta</td></tr>
+<tr><td>Se oye eco de mis altavoces</td><td>Grabas sin auriculares</td><td>Usa auriculares cerrados</td></tr>
+<tr><td>El micro no aparece</td><td>Lo usa otra aplicación en exclusiva</td><td>Cierra esa aplicación y reinicia OBS</td></tr>
+<tr><td>Volumen muy bajo aun a tope</td><td>Dinámico con interfaz de poca ganancia</td><td>Acércate; valora un preamplificador</td></tr>
+</tbody></table></div></div>
+<p>Si el problema es el cuarto y no los ajustes, lee
+<a href="../quitar-ruido-de-fondo/">cómo quitar el ruido de fondo</a>. Y si el micro
+recoge los golpes de la mesa, el arreglo es mecánico:
+<a href="../brazo-y-arana-antivibracion/">brazo y araña antivibración</a>.</p>
+
+      <h2 id="faq">Preguntas frecuentes</h2>
+<details><summary>¿En qué orden hay que poner los filtros del micrófono en OBS?</summary><p>Filtro paso alto, después puerta de ruido, después compresor y por último ganancia o limitador. El orden importa porque cada filtro trabaja sobre lo que le entrega el anterior: si comprimes antes de limpiar, amplificas el ruido que luego querrás quitar.</p></details>
+<details><summary>¿Por qué se oye ruido de fondo en OBS aunque el micrófono sea bueno?</summary><p>Lo habitual es tener demasiada ganancia para compensar que hablas lejos del micrófono. Al subir la ganancia subes tu voz y el ruido por igual. La solución es acercarte y bajar la ganancia, no añadir más filtros.</p></details>
+<details><summary>¿Qué valores debe tener el compresor en OBS?</summary><p>Un punto de partida razonable es ratio 3:1, umbral en torno a -18 dB, ataque de 6 ms y liberación de 60 ms, ajustando hasta ver unos 6 dB de reducción en los picos. Si el medidor marca reducción constante, el umbral está demasiado bajo.</p></details>
+<details><summary>¿Debo usar la supresión de ruido de OBS?</summary><p>Con moderación. El método RNNoise limpia bastante pero deja la voz algo metálica y se come las respiraciones. Si tu cuarto está razonablemente silencioso, una puerta de ruido suave da un resultado más natural.</p></details>
+      <div class="disc">Sitio informativo e independiente. No vendemos micrófonos ni recibimos pago por recomendar marcas. Los precios citados son rangos orientativos y cambian según tienda, país e importación: confirma siempre el precio en el comercio antes de comprar.</div>
+    </article>
+    <aside class="rail"><p class="rail-title">En esta guía</p><ol><li><a href="#antes">Antes de tocar OBS</a></li>
+<li><a href="#anadir">Añadir el micrófono</a></li>
+<li><a href="#cadena">La cadena de filtros, en orden</a></li>
+<li><a href="#valores">Valores de partida</a></li>
+<li><a href="#problemas">Problemas frecuentes</a></li></ol></aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div class="about">
+        <a class="brand" href="../">Micros<em>Streaming</em></a>
+        <p>Guías de micrófonos para streaming, podcast y locución. Escritas para que decidas tú, no para que compres más.</p>
+      </div>
+      <div><h4>Guías</h4><ul><li><a href="../mejores-micros-streaming/">Mejores micros</a></li><li><a href="../usb-o-xlr/">USB o XLR</a></li><li><a href="../microfono-condensador/">Condensador</a></li><li><a href="../micros-streaming-baratos/">Baratos</a></li><li><a href="../microfono-para-telefono/">Para teléfono</a></li></ul></div><div><h4>Por modelo</h4><ul><li><a href="../por-modelo/">Todas las fichas</a></li><li><a href="../behringer-c1/">Behringer C-1</a></li><li><a href="../behringer-c3/">Behringer C-3</a></li><li><a href="../hyperx-quadcast-rgb/">HyperX QuadCast</a></li></ul></div><div><h4>Aprender</h4><ul><li><a href="../dinamico-vs-condensador/">Dinámico vs condensador</a></li><li><a href="../configurar-microfono-obs/">Micrófono en OBS</a></li><li><a href="../quitar-ruido-de-fondo/">Quitar ruido de fondo</a></li><li><a href="../brazo-y-arana-antivibracion/">Brazo y araña</a></li><li><a href="../quienes-somos/">Quiénes somos</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 MicrosStreaming</span>
+      <span>HTML estático. Sin rastreadores.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/app.js" defer></script>
+</body>
+</html>
