@@ -43,15 +43,10 @@
   --accent: #FF4F00;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #0D0D0D;
-    --ink: #EEEEEE;
-    --ink-2: #8A8A8A;
-    --rule: #262626;
-  }
-}
+/* El tema claro es el predeterminado a proposito: el sitio es de lectura
+   larga y esa es la decision del autor. El modo oscuro existe, pero se
+   activa a mano con el conmutador de la cabecera, no por el ajuste del
+   sistema operativo. */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -539,4 +534,23 @@ footer.site .legal {
   gap: var(--s-3);
   flex-wrap: wrap;
   font-size: .78rem;
+}
+
+/* --- Diagramas -------------------------------------------------------- */
+.fig {
+  margin: var(--s-4) 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--rule);
+}
+.fig-art {
+  color: var(--ink);
+  display: block;
+  margin-bottom: var(--s-2);
+}
+.fig-art svg { display: block; width: 100%; height: auto; }
+.fig figcaption {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 54ch;
 }

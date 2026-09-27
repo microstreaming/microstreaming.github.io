@@ -63,6 +63,8 @@ metalizada frente a una placa fija. No pesa casi nada, así que reacciona a
 prácticamente cualquier variación de presión. Por eso capta el aire de tu voz. Y por eso
 capta también el perro del vecino.</p>
 
+[[fig:capsulas]]
+
 <div class="note">
 <strong>La misma frase describe la ventaja y el problema:</strong> el condensador oye
 todo lo que hay en la habitación.
@@ -421,6 +423,8 @@ dos entradas duplicadas.</li>
 
 <h2 id="cadena">La cadena de filtros, en orden</h2>
 <p>El orden no es decorativo: cada filtro procesa lo que le pasa el anterior.</p>
+
+[[fig:filtros]]
 <table>
 <thead><tr><th>#</th><th>Filtro</th><th>Qué hace</th><th>Por qué va ahí</th></tr></thead>
 <tbody>
@@ -624,6 +628,8 @@ irrecuperable, quizá el micrófono sea el equivocado:
 <p>Todo lo que has leído sobre acercarte al micrófono depende de poder sostenerlo cerca
 de la boca sin que esté apoyado en la mesa. Eso es el brazo. Y todo lo que golpea la
 mesa viaja por la madera hasta la cápsula. Eso lo corta la araña.</p>
+
+[[fig:montaje]]
 <table>
 <thead><tr><th>Problema</th><th>Lo resuelve</th></tr></thead>
 <tbody>

@@ -13,6 +13,7 @@ import re
 
 import content_guias
 import content_modelos
+import figures
 from content import NOT_FOUND, PAGES, SITE
 
 # El contenido se reparte en modulos para no inflar content.py:
@@ -118,11 +119,17 @@ def toc_html(page):
 
 
 def enhance(body):
-    """Envuelve las tablas para que se desplacen en movil sin romper el
-    ancho de lectura. Nada mas: el resto del estilo lo pone el CSS."""
+    """Retoques de marcado sobre el HTML de contenido.
+
+    - Envuelve las tablas para que se desplacen en movil sin romper el
+      ancho de lectura.
+    - Sustituye los marcadores [[fig:nombre]] por el diagrama SVG.
+    """
     body = body.replace("<table>",
                         '<div class="table-wrap"><div class="table-scroll"><table>')
     body = body.replace("</table>", "</table></div></div>")
+    body = re.sub(r"\[\[fig:([a-z-]+)\]\]",
+                  lambda m: figures.render(m.group(1)), body)
     return body
 
 
@@ -133,7 +140,7 @@ def eyebrow_for(page, slug):
     no son ni guia ni ficha se quedan sin el, que es mejor que rellenar.
     """
     if not slug:
-        return "Guía independiente &middot; %s" % TODAY[:4]
+        return "Streaming &middot; Creadores &middot; Podcast &middot; Homestudio"
     return page.get("kind") or ("Guía" if page.get("article") else "")
 
 
@@ -296,7 +303,7 @@ TPL = """<!doctype html>
     <div class="cols">
       <div class="about">
         <a class="brand" href="{root}">Micros<em>Streaming</em></a>
-        <p>Guías de micrófonos para streaming, podcast y locución. Escritas para que decidas tú, no para que compres más.</p>
+        <p>Micrófonos para streaming, creadores de contenido, podcast y homestudio. Escritas para que decidas tú, no para que compres más.</p>
       </div>
       {footer_cols}
     </div>

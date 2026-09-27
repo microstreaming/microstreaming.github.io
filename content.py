@@ -19,8 +19,9 @@ BASE = os.environ.get("MS_BASE", BASE_DEFAULT).rstrip("/")
 SITE = {
     "name": "MicrosStreaming",
     "base": BASE,
-    "desc": ("Guias independientes sobre micros para streaming: comparativas, "
-             "consejos de configuracion y ayuda para elegir microfono."),
+    "desc": ("Guias independientes de microfonos para streaming, creadores de "
+             "contenido, podcast y homestudio: comparativas, configuracion y "
+             "ayuda para elegir."),
     "published": "2026-09-21",
     "updated": "2026-09-23",
 }
@@ -29,14 +30,16 @@ PAGES = {}
 
 # --------------------------------------------------------------------------
 PAGES[""] = {
-    "title": "Micros Streaming: guía para elegir micrófono en 2026",
-    "desc": ("Guía honesta de micros para streaming: USB o XLR, condensador o "
-             "dinámico, cuánto gastar y qué modelo encaja con tu cuarto."),
-    "h1": "Micros para streaming: elige bien a la primera",
+    "title": "Micros para streaming, podcast y homestudio: cuál comprar",
+    "desc": ("Guía honesta de micros para streaming, creadores de contenido, "
+             "podcast y homestudio: USB o XLR, condensador o dinámico, cuánto "
+             "gastar y qué modelo encaja con tu cuarto."),
+    "h1": "Micros para streaming, podcast y homestudio",
     "crumb": "Inicio",
-    "lede": ("Ochenta por ciento de los directos que suenan mal no tienen un problema "
-             "de micrófono, sino de cuarto, de patrón polar o de ganancia. Aquí "
-             "aprendes a distinguir las tres cosas antes de gastar un peso."),
+    "lede": ("Tanto si transmites en directo como si grabas vídeo de formato "
+             "largo, un podcast o voz en off desde casa, el problema suele ser "
+             "el mismo: no es el micrófono, es el cuarto, el patrón polar o la "
+             "ganancia. Aquí aprendes a distinguirlos antes de gastar un peso."),
     "toc": [
         ("empezar", "Por dónde empezar"),
         ("tres-decisiones", "Las tres decisiones que importan"),
@@ -75,6 +78,8 @@ delante de él.</p>
 <p>Esta guía está escrita al revés: primero decides, después compras. Cada bloque de
 abajo lleva a una guía específica cuando necesitas profundizar.</p>
 
+[[fig:distancia]]
+
 <div class="note">
 <strong>Regla de oro:</strong> la distancia entre tu boca y la cápsula es la variable
 que más cambia tu sonido, y es gratis. A 10 cm tu voz domina el ambiente; a 50 cm tu
@@ -106,6 +111,8 @@ añadir un segundo invitado), pero cuesta más en total.</p>
 <strong>cardioide</strong>: capta de frente y rechaza por detrás. Los micros con
 selector multipatrón (omni, bidireccional, estéreo) son útiles para entrevistas
 presenciales, pero para un streamer solo suman botones que se pueden mover sin querer.</p>
+
+[[fig:patrones]]
 
 <table>
 <thead><tr><th>Patrón</th><th>Capta desde</th><th>Úsalo para</th></tr></thead>
@@ -491,6 +498,8 @@ PAGES["usb-o-xlr/"] = {
 preamplificador, conversor analógico-digital y tarjeta de sonido. Por eso funciona solo.</p>
 <p>Un <strong>micrófono XLR</strong> entrega señal analógica balanceada y nada más. La
 interfaz hace el resto del trabajo.</p>
+
+[[fig:cadena]]
 <table>
 <thead><tr><th></th><th>USB</th><th>XLR</th></tr></thead>
 <tbody>
