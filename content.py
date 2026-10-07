@@ -23,7 +23,7 @@ SITE = {
              "contenido, podcast y homestudio: comparativas, configuracion y "
              "ayuda para elegir."),
     "published": "2026-09-21",
-    "updated": "2026-09-23",
+    "updated": "2026-10-07",
 }
 
 PAGES = {}
@@ -192,6 +192,47 @@ corta las palabras. Empieza solo con un compresor suave y un filtro paso alto en
 <li><a href="configurar-microfono-obs/">Cómo configurar el micrófono en OBS</a></li>
 <li><a href="quitar-ruido-de-fondo/">Cómo quitar el ruido de fondo</a></li>
 <li><a href="brazo-y-arana-antivibracion/">Brazo y araña antivibración</a></li>
+</ul>
+
+<h3>Micrófonos analizados</h3>
+<ul>
+<li><a href="shure-sm58/">Shure SM58</a></li>
+<li><a href="shure-sm7b/">Shure SM7B</a></li>
+<li><a href="rode-podmic/">Rode PodMic</a></li>
+<li><a href="audio-technica-at2020/">Audio-Technica AT2020</a></li>
+<li><a href="blue-yeti/">Blue Yeti</a></li>
+</ul>
+
+<h3>Equipo de apoyo</h3>
+<ul>
+<li><a href="interfaz-de-audio/">Interfaz de audio: qué mirar</a></li>
+<li><a href="filtro-antipop/">Filtro antipop</a></li>
+<li><a href="microfono-de-solapa/">Micrófono de solapa</a></li>
+<li><a href="microfono-inalambrico/">Micrófono inalámbrico</a></li>
+</ul>
+
+<h3>Según para qué grabas</h3>
+<ul>
+<li><a href="microfono-para-gaming/">Micrófono para gaming</a></li>
+<li><a href="microfono-para-cantar/">Micrófono para cantar en casa</a></li>
+<li><a href="microfono-para-videollamadas/">Micrófono para videollamadas</a></li>
+<li><a href="microfono-para-voz-en-off/">Micrófono para voz en off</a></li>
+</ul>
+
+<h3>Técnica y procesado</h3>
+<ul>
+<li><a href="phantom-48v/">Alimentación phantom 48 V</a></li>
+<li><a href="efecto-proximidad/">Efecto de proximidad</a></li>
+<li><a href="ganancia-del-microfono/">Ajustar la ganancia</a></li>
+<li><a href="compresor-de-voz/">Compresor para voz</a></li>
+<li><a href="ecualizar-la-voz/">Cómo ecualizar la voz</a></li>
+<li><a href="latencia-del-microfono/">Latencia del micrófono</a></li>
+</ul>
+
+<h3>Problemas y acústica</h3>
+<ul>
+<li><a href="microfono-no-funciona-windows/">El micrófono no funciona en Windows</a></li>
+<li><a href="tratamiento-acustico-casero/">Tratamiento acústico casero</a></li>
 </ul>
 
 <h3>Sobre el sitio</h3>

@@ -11,6 +11,9 @@ import json
 import os
 import re
 
+import content_articulos_a
+import content_articulos_b
+import content_articulos_c
 import content_guias
 import content_modelos
 import figures
@@ -20,6 +23,9 @@ from content import NOT_FOUND, PAGES, SITE
 # las fichas por modelo y las guias de apoyo van aparte.
 content_modelos.add_pages(PAGES, SITE)
 content_guias.add_pages(PAGES, SITE)
+content_articulos_a.add_pages(PAGES, SITE)
+content_articulos_b.add_pages(PAGES, SITE)
+content_articulos_c.add_pages(PAGES, SITE)
 
 BASE = SITE["base"]
 TODAY = SITE["updated"]
@@ -52,7 +58,8 @@ FOOTER_COLS = [
         ("dinamico-vs-condensador/", "Dinámico vs condensador"),
         ("configurar-microfono-obs/", "Micrófono en OBS"),
         ("quitar-ruido-de-fondo/", "Quitar ruido de fondo"),
-        ("brazo-y-arana-antivibracion/", "Brazo y araña"),
+        ("tratamiento-acustico-casero/", "Tratamiento acústico"),
+        ("ganancia-del-microfono/", "Ganancia"),
         ("quienes-somos/", "Quiénes somos"),
     ]),
 ]

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compresor para voz: qué hace y cómo ajustarlo sin estropearla</title>
+<meta name="description" content="Compresor de voz explicado sin jerga: umbral, ratio, ataque y liberación, con valores de partida para locución, podcast y directo.">
+<link rel="canonical" href="https://microstreaming.github.io/compresor-de-voz/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="MicrosStreaming">
+<meta property="og:title" content="Compresor para voz: qué hace y cómo ajustarlo sin estropearla">
+<meta property="og:description" content="Compresor de voz explicado sin jerga: umbral, ratio, ataque y liberación, con valores de partida para locución, podcast y directo.">
+<meta property="og:url" content="https://microstreaming.github.io/compresor-de-voz/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0D0D0D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("ms-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://microstreaming.github.io/#website", "url": "https://microstreaming.github.io/", "name": "MicrosStreaming", "inLanguage": "es", "publisher": {"@id": "https://microstreaming.github.io/#org"}}, {"@type": "Organization", "@id": "https://microstreaming.github.io/#org", "name": "MicrosStreaming", "url": "https://microstreaming.github.io/", "description": "Guias independientes de microfonos para streaming, creadores de contenido, podcast y homestudio: comparativas, configuracion y ayuda para elegir."}, {"@type": "WebPage", "@id": "https://microstreaming.github.io/compresor-de-voz/#webpage", "url": "https://microstreaming.github.io/compresor-de-voz/", "name": "Compresor para voz: qué hace y cómo ajustarlo sin estropearla", "description": "Compresor de voz explicado sin jerga: umbral, ratio, ataque y liberación, con valores de partida para locución, podcast y directo.", "inLanguage": "es", "isPartOf": {"@id": "https://microstreaming.github.io/#website"}, "dateModified": "2026-10-07"}, {"@type": "Article", "@id": "https://microstreaming.github.io/compresor-de-voz/#article", "headline": "Compresor para voz: iguala, no engorda", "description": "Compresor de voz explicado sin jerga: umbral, ratio, ataque y liberación, con valores de partida para locución, podcast y directo.", "inLanguage": "es", "datePublished": "2026-09-21", "dateModified": "2026-10-07", "author": {"@id": "https://microstreaming.github.io/#org"}, "publisher": {"@id": "https://microstreaming.github.io/#org"}, "mainEntityOfPage": {"@id": "https://microstreaming.github.io/compresor-de-voz/#webpage"}}, {"@type": "FAQPage", "@id": "https://microstreaming.github.io/compresor-de-voz/#faq", "mainEntity": [{"@type": "Question", "name": "¿Qué hace un compresor de voz?", "acceptedAnswer": {"@type": "Answer", "text": "Reduce la diferencia entre las partes más fuertes y las más suaves de tu voz. El resultado es un nivel más constante, que se entiende mejor y no obliga al oyente a tocar el volumen."}}, {"@type": "Question", "name": "¿Qué valores de compresor debo usar para voz hablada?", "acceptedAnswer": {"@type": "Answer", "text": "Un punto de partida razonable es ratio 3:1, umbral que produzca unos 6 dB de reducción en los picos, ataque de unos 5-10 ms y liberación de 60-100 ms. A partir de ahí se ajusta escuchando."}}, {"@type": "Question", "name": "¿El compresor sube el ruido de fondo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, indirectamente. Al bajar los picos y recuperar nivel después, el ruido de las partes silenciosas sube con él. Por eso conviene limpiar antes de comprimir, no al revés."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://microstreaming.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Compresor de voz", "item": "https://microstreaming.github.io/compresor-de-voz/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="../">Micros<em>Streaming</em></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label class="burger" for="nav-toggle">Menú</label>
+    <nav class="main" aria-label="Principal"><a href="../">Inicio</a>
+<a href="../mejores-micros-streaming/">Mejores micros</a>
+<a href="../por-modelo/">Por modelo</a>
+<a href="../microfono-condensador/">Condensador</a>
+<a href="../usb-o-xlr/">USB o XLR</a>
+<a href="../micros-streaming-baratos/">Baratos</a>
+<a href="../microfono-para-telefono/">Para teléfono</a></nav>
+    <button class="theme-btn" type="button">Tema</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Ruta"><a href="../">Inicio</a><span class="sep">/</span><span>Compresor de voz</span></nav>
+    <p class="eyebrow">Guía</p>
+    <h1>Compresor para voz: <em>iguala, no engorda</em></h1>
+    <p class="lede">Es el proceso que hace que una voz suene profesional y constante. También el que más fácil es pasarse de rosca.</p>
+    <ul class="meta">
+      <li>Actualizado <b>7 de octubre de 2026</b></li>
+      <li>Guía independiente</li>
+      <li>Sin enlaces patrocinados</li>
+    </ul>
+  </div>
+</section>
+
+<main id="contenido">
+  <div class="wrap layout">
+    <article class="prose">
+      
+<h2 id="que-hace">Qué hace realmente</h2>
+<p>Imagina que alguien baja el volumen justo cuando gritas y lo vuelve a subir cuando
+hablas bajo. Eso es un compresor, hecho automáticamente y en milisegundos.</p>
+<p>El objetivo no es que suene más fuerte, sino <strong>más constante</strong>. Lo de
+sonar más fuerte viene después, al recuperar nivel.</p>
+<div class="note">
+<strong>Orden importa:</strong> limpia primero, comprime después. Comprimir antes de
+limpiar amplifica el ruido que ibas a quitar.
+</div>
+
+<h2 id="controles">Los cuatro controles</h2>
+<div class="table-wrap"><div class="table-scroll"><table>
+<thead><tr><th>Control</th><th>Qué decide</th><th>Si te pasas</th></tr></thead>
+<tbody>
+<tr><td>Umbral</td><td>A partir de qué nivel actúa</td><td>Comprime todo, incluido el ruido</td></tr>
+<tr><td>Ratio</td><td>Cuánto reduce lo que pasa el umbral</td><td>Voz aplastada, sin vida</td></tr>
+<tr><td>Ataque</td><td>Cuánto tarda en reaccionar</td><td>Muy rápido: mata las consonantes</td></tr>
+<tr><td>Liberación</td><td>Cuánto tarda en soltar</td><td>Muy lenta: la voz «respira» raro</td></tr>
+</tbody></table></div></div>
+<p>Hay un quinto, la <strong>ganancia de compensación</strong>, que recupera el volumen
+perdido. Súbela solo lo justo para igualar con el sonido sin comprimir.</p>
+
+<h2 id="valores">Valores de partida</h2>
+<div class="table-wrap"><div class="table-scroll"><table>
+<thead><tr><th>Uso</th><th>Ratio</th><th>Reducción objetivo</th><th>Ataque / Liberación</th></tr></thead>
+<tbody>
+<tr><td>Locución y voz en off</td><td>3:1</td><td>4-6 dB</td><td>10 ms / 100 ms</td></tr>
+<tr><td>Podcast conversacional</td><td>3:1</td><td>6 dB</td><td>6 ms / 80 ms</td></tr>
+<tr><td>Directo y gaming</td><td>4:1</td><td>6-9 dB</td><td>5 ms / 60 ms</td></tr>
+<tr><td>Voz muy dinámica</td><td>4:1 o dos compresores suaves</td><td>8 dB</td><td>5 ms / 70 ms</td></tr>
+</tbody></table></div></div>
+<p>Fíjate en que el ratio apenas cambia. Lo que de verdad ajustas es el umbral, mirando
+cuántos decibelios de reducción marca el medidor.</p>
+
+<h2 id="errores">Señales de que te pasaste</h2>
+<ul class="checks">
+<li><strong>El medidor de reducción nunca vuelve a cero.</strong> Estás comprimiendo
+también el silencio.</li>
+<li><strong>Se oye el ruido de fondo subir y bajar</strong> entre frases.</li>
+<li><strong>Las consonantes suenan apagadas</strong>: ataque demasiado rápido.</li>
+<li><strong>La voz cansa</strong> a los diez minutos. Es el síntoma más fiable.</li>
+<li><strong>Todo suena igual de fuerte</strong>, sin matiz ni intención.</li>
+</ul>
+<p>Antes del compresor, asegúrate de que la
+<a href="../ganancia-del-microfono/">ganancia</a> está bien. Después,
+<a href="../ecualizar-la-voz/">la ecualización</a>.</p>
+
+      <h2 id="faq">Preguntas frecuentes</h2>
+<details><summary>¿Qué hace un compresor de voz?</summary><p>Reduce la diferencia entre las partes más fuertes y las más suaves de tu voz. El resultado es un nivel más constante, que se entiende mejor y no obliga al oyente a tocar el volumen.</p></details>
+<details><summary>¿Qué valores de compresor debo usar para voz hablada?</summary><p>Un punto de partida razonable es ratio 3:1, umbral que produzca unos 6 dB de reducción en los picos, ataque de unos 5-10 ms y liberación de 60-100 ms. A partir de ahí se ajusta escuchando.</p></details>
+<details><summary>¿El compresor sube el ruido de fondo?</summary><p>Sí, indirectamente. Al bajar los picos y recuperar nivel después, el ruido de las partes silenciosas sube con él. Por eso conviene limpiar antes de comprimir, no al revés.</p></details>
+      <div class="disc">Sitio informativo e independiente. No vendemos micrófonos ni recibimos pago por recomendar marcas. Los precios citados son rangos orientativos y cambian según tienda, país e importación: confirma siempre el precio en el comercio antes de comprar.</div>
+    </article>
+    <aside class="rail"><p class="rail-title">En esta guía</p><ol><li><a href="#que-hace">Qué hace realmente</a></li>
+<li><a href="#controles">Los cuatro controles</a></li>
+<li><a href="#valores">Valores de partida</a></li>
+<li><a href="#errores">Señales de que te pasaste</a></li></ol></aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div class="about">
+        <a class="brand" href="../">Micros<em>Streaming</em></a>
+        <p>Micrófonos para streaming, creadores de contenido, podcast y homestudio. Escritas para que decidas tú, no para que compres más.</p>
+      </div>
+      <div><h4>Guías</h4><ul><li><a href="../mejores-micros-streaming/">Mejores micros</a></li><li><a href="../usb-o-xlr/">USB o XLR</a></li><li><a href="../microfono-condensador/">Condensador</a></li><li><a href="../micros-streaming-baratos/">Baratos</a></li><li><a href="../microfono-para-telefono/">Para teléfono</a></li></ul></div><div><h4>Por modelo</h4><ul><li><a href="../por-modelo/">Todas las fichas</a></li><li><a href="../behringer-c1/">Behringer C-1</a></li><li><a href="../behringer-c3/">Behringer C-3</a></li><li><a href="../hyperx-quadcast-rgb/">HyperX QuadCast</a></li></ul></div><div><h4>Aprender</h4><ul><li><a href="../dinamico-vs-condensador/">Dinámico vs condensador</a></li><li><a href="../configurar-microfono-obs/">Micrófono en OBS</a></li><li><a href="../quitar-ruido-de-fondo/">Quitar ruido de fondo</a></li><li><a href="../tratamiento-acustico-casero/">Tratamiento acústico</a></li><li><a href="../ganancia-del-microfono/">Ganancia</a></li><li><a href="../quienes-somos/">Quiénes somos</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 MicrosStreaming</span>
+      <span>HTML estático. Sin rastreadores.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/app.js" defer></script>
+</body>
+</html>

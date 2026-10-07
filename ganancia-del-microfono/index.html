@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cómo ajustar la ganancia del micrófono correctamente</title>
+<meta name="description" content="Cómo ajustar la ganancia del micrófono: qué nivel buscar, por qué no debe llegar a 0 dB, diferencia entre ganancia y volumen y cómo evitar el ruido.">
+<link rel="canonical" href="https://microstreaming.github.io/ganancia-del-microfono/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="MicrosStreaming">
+<meta property="og:title" content="Cómo ajustar la ganancia del micrófono correctamente">
+<meta property="og:description" content="Cómo ajustar la ganancia del micrófono: qué nivel buscar, por qué no debe llegar a 0 dB, diferencia entre ganancia y volumen y cómo evitar el ruido.">
+<meta property="og:url" content="https://microstreaming.github.io/ganancia-del-microfono/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0D0D0D" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("ms-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://microstreaming.github.io/#website", "url": "https://microstreaming.github.io/", "name": "MicrosStreaming", "inLanguage": "es", "publisher": {"@id": "https://microstreaming.github.io/#org"}}, {"@type": "Organization", "@id": "https://microstreaming.github.io/#org", "name": "MicrosStreaming", "url": "https://microstreaming.github.io/", "description": "Guias independientes de microfonos para streaming, creadores de contenido, podcast y homestudio: comparativas, configuracion y ayuda para elegir."}, {"@type": "WebPage", "@id": "https://microstreaming.github.io/ganancia-del-microfono/#webpage", "url": "https://microstreaming.github.io/ganancia-del-microfono/", "name": "Cómo ajustar la ganancia del micrófono correctamente", "description": "Cómo ajustar la ganancia del micrófono: qué nivel buscar, por qué no debe llegar a 0 dB, diferencia entre ganancia y volumen y cómo evitar el ruido.", "inLanguage": "es", "isPartOf": {"@id": "https://microstreaming.github.io/#website"}, "dateModified": "2026-10-07"}, {"@type": "Article", "@id": "https://microstreaming.github.io/ganancia-del-microfono/#article", "headline": "Ganancia del micrófono: ni al máximo ni al mínimo", "description": "Cómo ajustar la ganancia del micrófono: qué nivel buscar, por qué no debe llegar a 0 dB, diferencia entre ganancia y volumen y cómo evitar el ruido.", "inLanguage": "es", "datePublished": "2026-09-21", "dateModified": "2026-10-07", "author": {"@id": "https://microstreaming.github.io/#org"}, "publisher": {"@id": "https://microstreaming.github.io/#org"}, "mainEntityOfPage": {"@id": "https://microstreaming.github.io/ganancia-del-microfono/#webpage"}}, {"@type": "FAQPage", "@id": "https://microstreaming.github.io/ganancia-del-microfono/#faq", "mainEntity": [{"@type": "Question", "name": "¿Cuál es el nivel correcto de ganancia del micrófono?", "acceptedAnswer": {"@type": "Answer", "text": "El que haga que tus picos normales al hablar lleguen a unos -12 dB, dejando margen por encima. Llegar a 0 dB significa saturar, y eso no se arregla después."}}, {"@type": "Question", "name": "¿Qué diferencia hay entre ganancia y volumen?", "acceptedAnswer": {"@type": "Answer", "text": "La ganancia amplifica la señal al entrar, antes de grabarla; el volumen ajusta lo que escuchas a la salida. Subir el volumen no mejora una señal grabada con poca ganancia, y subir la ganancia de más arruina la grabación."}}, {"@type": "Question", "name": "¿Por qué se oye ruido de fondo al subir la ganancia?", "acceptedAnswer": {"@type": "Answer", "text": "Porque la ganancia amplifica todo por igual: tu voz y el ruido de la sala y del preamplificador. Si necesitas mucha ganancia es señal de que estás demasiado lejos del micrófono."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://microstreaming.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Ganancia", "item": "https://microstreaming.github.io/ganancia-del-microfono/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="../">Micros<em>Streaming</em></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label class="burger" for="nav-toggle">Menú</label>
+    <nav class="main" aria-label="Principal"><a href="../">Inicio</a>
+<a href="../mejores-micros-streaming/">Mejores micros</a>
+<a href="../por-modelo/">Por modelo</a>
+<a href="../microfono-condensador/">Condensador</a>
+<a href="../usb-o-xlr/">USB o XLR</a>
+<a href="../micros-streaming-baratos/">Baratos</a>
+<a href="../microfono-para-telefono/">Para teléfono</a></nav>
+    <button class="theme-btn" type="button">Tema</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Ruta"><a href="../">Inicio</a><span class="sep">/</span><span>Ganancia</span></nav>
+    <p class="eyebrow">Guía</p>
+    <h1>Ganancia del micrófono: <em>ni al máximo ni al mínimo</em></h1>
+    <p class="lede">La mitad de los problemas de ruido que la gente intenta resolver con plugins son en realidad un mando de ganancia mal puesto.</p>
+    <ul class="meta">
+      <li>Actualizado <b>7 de octubre de 2026</b></li>
+      <li>Guía independiente</li>
+      <li>Sin enlaces patrocinados</li>
+    </ul>
+  </div>
+</section>
+
+<main id="contenido">
+  <div class="wrap layout">
+    <article class="prose">
+      
+<h2 id="que-es">Ganancia no es volumen</h2>
+<p>Es la confusión que está detrás de casi todos los problemas.</p>
+<div class="table-wrap"><div class="table-scroll"><table>
+<thead><tr><th></th><th>Ganancia</th><th>Volumen</th></tr></thead>
+<tbody>
+<tr><td>Dónde actúa</td><td>A la entrada</td><td>A la salida</td></tr>
+<tr><td>Afecta a lo grabado</td><td>Sí</td><td>No</td></tr>
+<tr><td>Si te pasas</td><td>Satura, irreversible</td><td>Solo molesta al oído</td></tr>
+<tr><td>Si te quedas corto</td><td>Ruido al amplificar después</td><td>Sin consecuencia</td></tr>
+</tbody></table></div></div>
+<div class="note">
+<strong>La ganancia se decide antes de grabar y no tiene vuelta atrás.</strong> El
+volumen se puede cambiar mil veces.
+</div>
+
+<h2 id="nivel">Qué nivel buscar</h2>
+<ul class="checks">
+<li><strong>Picos normales en torno a -12 dB.</strong> Ese es el objetivo.</li>
+<li><strong>Nunca tocar 0 dB.</strong> Ahí empieza la distorsión digital.</li>
+<li><strong>Deja margen para los gritos.</strong> Ajusta hablando a tu volumen más alto,
+no al normal.</li>
+<li><strong>El ruido de fondo, muy por debajo</strong>, idealmente bajo -60 dB.</li>
+</ul>
+
+<h2 id="ajustar">Cómo ajustarla en tres minutos</h2>
+<ol>
+<li><strong>Colócate donde vas a hablar de verdad</strong>, a la distancia real.</li>
+<li><strong>Ganancia al mínimo</strong> para empezar.</li>
+<li><strong>Habla a tu volumen más alto</strong>, no al de prueba. Mucha gente ajusta
+susurrando y luego satura.</li>
+<li><strong>Sube la ganancia poco a poco</strong> hasta que esos picos lleguen a -12 dB.</li>
+<li><strong>Calla y mira el medidor.</strong> Si el silencio se mueve mucho, tienes
+demasiada ganancia o demasiado ruido.</li>
+<li><strong>Graba treinta segundos y escúchalos</strong> con auriculares.</li>
+</ol>
+
+<h2 id="sintomas">Diagnóstico por síntoma</h2>
+<div class="table-wrap"><div class="table-scroll"><table>
+<thead><tr><th>Síntoma</th><th>Causa</th><th>Arreglo</th></tr></thead>
+<tbody>
+<tr><td>Distorsión en las palabras fuertes</td><td>Ganancia alta</td><td>Bajar y repetir la prueba de grito</td></tr>
+<tr><td>Siseo constante</td><td>Ganancia alta por estar lejos</td><td>Acercarse y bajar ganancia</td></tr>
+<tr><td>Voz muy baja aun al máximo</td><td>Dinámico con interfaz floja</td><td>Acercarse; valorar preamplificador</td></tr>
+<tr><td>Volumen que sube y baja solo</td><td>Control automático activado</td><td>Desactivarlo en el sistema</td></tr>
+<tr><td>Ruido que sube al callar</td><td>Compresor mal ajustado</td><td>Subir su umbral</td></tr>
+</tbody></table></div></div>
+<p>Para la cadena completa, <a href="../configurar-microfono-obs/">configurar el
+micrófono en OBS</a>.</p>
+
+      <h2 id="faq">Preguntas frecuentes</h2>
+<details><summary>¿Cuál es el nivel correcto de ganancia del micrófono?</summary><p>El que haga que tus picos normales al hablar lleguen a unos -12 dB, dejando margen por encima. Llegar a 0 dB significa saturar, y eso no se arregla después.</p></details>
+<details><summary>¿Qué diferencia hay entre ganancia y volumen?</summary><p>La ganancia amplifica la señal al entrar, antes de grabarla; el volumen ajusta lo que escuchas a la salida. Subir el volumen no mejora una señal grabada con poca ganancia, y subir la ganancia de más arruina la grabación.</p></details>
+<details><summary>¿Por qué se oye ruido de fondo al subir la ganancia?</summary><p>Porque la ganancia amplifica todo por igual: tu voz y el ruido de la sala y del preamplificador. Si necesitas mucha ganancia es señal de que estás demasiado lejos del micrófono.</p></details>
+      <div class="disc">Sitio informativo e independiente. No vendemos micrófonos ni recibimos pago por recomendar marcas. Los precios citados son rangos orientativos y cambian según tienda, país e importación: confirma siempre el precio en el comercio antes de comprar.</div>
+    </article>
+    <aside class="rail"><p class="rail-title">En esta guía</p><ol><li><a href="#que-es">Ganancia no es volumen</a></li>
+<li><a href="#nivel">Qué nivel buscar</a></li>
+<li><a href="#ajustar">Cómo ajustarla en tres minutos</a></li>
+<li><a href="#sintomas">Diagnóstico por síntoma</a></li></ol></aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div class="about">
+        <a class="brand" href="../">Micros<em>Streaming</em></a>
+        <p>Micrófonos para streaming, creadores de contenido, podcast y homestudio. Escritas para que decidas tú, no para que compres más.</p>
+      </div>
+      <div><h4>Guías</h4><ul><li><a href="../mejores-micros-streaming/">Mejores micros</a></li><li><a href="../usb-o-xlr/">USB o XLR</a></li><li><a href="../microfono-condensador/">Condensador</a></li><li><a href="../micros-streaming-baratos/">Baratos</a></li><li><a href="../microfono-para-telefono/">Para teléfono</a></li></ul></div><div><h4>Por modelo</h4><ul><li><a href="../por-modelo/">Todas las fichas</a></li><li><a href="../behringer-c1/">Behringer C-1</a></li><li><a href="../behringer-c3/">Behringer C-3</a></li><li><a href="../hyperx-quadcast-rgb/">HyperX QuadCast</a></li></ul></div><div><h4>Aprender</h4><ul><li><a href="../dinamico-vs-condensador/">Dinámico vs condensador</a></li><li><a href="../configurar-microfono-obs/">Micrófono en OBS</a></li><li><a href="../quitar-ruido-de-fondo/">Quitar ruido de fondo</a></li><li><a href="../tratamiento-acustico-casero/">Tratamiento acústico</a></li><li><a href="../ganancia-del-microfono/">Ganancia</a></li><li><a href="../quienes-somos/">Quiénes somos</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 MicrosStreaming</span>
+      <span>HTML estático. Sin rastreadores.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/app.js" defer></script>
+</body>
+</html>
