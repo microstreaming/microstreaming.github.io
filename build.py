@@ -387,8 +387,22 @@ def build():
                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
                  + urls + "</urlset>")
 
+    # Indice de sitemaps. Estructura estandar para cuando haya que partir
+    # el sitemap en varios, y de paso una URL distinta que enviar a Search
+    # Console cuando la entrada de /sitemap.xml se queda atascada.
+    with open(os.path.join(root_dir, "sitemap_index.xml"), "w",
+              encoding="utf-8") as fh:
+        fh.write('<?xml version="1.0" encoding="UTF-8"?>'
+                 '<sitemapindex '
+                 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                 '<sitemap><loc>%s/sitemap.xml</loc>'
+                 '<lastmod>%s</lastmod></sitemap>'
+                 '</sitemapindex>' % (BASE, TODAY))
+
     with open(os.path.join(root_dir, "robots.txt"), "w", encoding="utf-8") as fh:
-        fh.write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % BASE)
+        fh.write("User-agent: *\nAllow: /\n\n"
+                 "Sitemap: %s/sitemap_index.xml\n"
+                 "Sitemap: %s/sitemap.xml\n" % (BASE, BASE))
 
     with open(os.path.join(root_dir, ".nojekyll"), "w", encoding="utf-8") as fh:
         fh.write("")

@@ -23,7 +23,7 @@ SITE = {
              "contenido, podcast y homestudio: comparativas, configuracion y "
              "ayuda para elegir."),
     "published": "2026-09-21",
-    "updated": "2026-10-07",
+    "updated": "2026-10-08",
 }
 
 PAGES = {}
