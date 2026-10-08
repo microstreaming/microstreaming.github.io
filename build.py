@@ -17,6 +17,7 @@ import content_articulos_c
 import content_guias
 import content_modelos
 import figures
+import og_images
 import seo_meta
 from content import NOT_FOUND, PAGES, SITE
 
@@ -261,7 +262,12 @@ TPL = """<!doctype html>
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{canonical}">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="{ogimage}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{title}">
+<meta name="twitter:image" content="{ogimage}">
 <meta name="theme-color" content="#0D0D0D" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
 <link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml">
@@ -345,7 +351,7 @@ def render(page, slug, absolute_nav=False):
         toc="" if absolute_nav else toc_html(page),
         body=enhance(page["body"]), faq=faq_html(page),
         jsonld=jsonld(page, slug), updated_h=human_date(TODAY),
-        boot=THEME_BOOT,
+        boot=THEME_BOOT, ogimage=BASE + '/' + og_images.ruta_og(slug),
         footer_cols=footer_html(root), year=TODAY[:4],
     )
 
@@ -364,6 +370,8 @@ def build():
         'content="index,follow', 'content="noindex,follow')
     with open(os.path.join(root_dir, "404.html"), "w", encoding="utf-8") as fh:
         fh.write(html404)
+
+    n_og = og_images.generar(PAGES, root_dir)
 
     assets = os.path.join(root_dir, "assets")
     os.makedirs(assets, exist_ok=True)
@@ -385,7 +393,8 @@ def build():
     with open(os.path.join(root_dir, ".nojekyll"), "w", encoding="utf-8") as fh:
         fh.write("")
 
-    print("Generadas %d paginas + 404 + sitemap + robots" % len(PAGES))
+    print("Generadas %d paginas + %d miniaturas + 404 + sitemap + robots"
+          % (len(PAGES), n_og))
 
 
 if __name__ == "__main__":
