@@ -17,6 +17,7 @@ import content_articulos_c
 import content_guias
 import content_modelos
 import figures
+import seo_meta
 from content import NOT_FOUND, PAGES, SITE
 
 # El contenido se reparte en modulos para no inflar content.py:
@@ -26,6 +27,10 @@ content_guias.add_pages(PAGES, SITE)
 content_articulos_a.add_pages(PAGES, SITE)
 content_articulos_b.add_pages(PAGES, SITE)
 content_articulos_c.add_pages(PAGES, SITE)
+
+# Los titulos y descripciones viven juntos en seo_meta.py: se revisan
+# mirando el porcentaje de clics, no al escribir el articulo.
+seo_meta.apply(PAGES)
 
 BASE = SITE["base"]
 TODAY = SITE["updated"]
